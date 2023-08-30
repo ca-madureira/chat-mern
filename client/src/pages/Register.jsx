@@ -16,8 +16,10 @@ const Register = () => {
         <Row
           style={{
             height: "100vh",
+            width: "60vh",
+            marginLeft: "30%",
             justifyContent: "center",
-            paddingTop: "20%",
+            paddingTop: "10%",
           }}
         >
           <Col sx={6}>
@@ -26,7 +28,7 @@ const Register = () => {
 
               <Form.Control
                 type='text'
-                placeholder='Name'
+                placeholder='Nome'
                 onChange={(e) =>
                   updateRegisterInfo({ ...registerInfo, name: e.target.value })
                 }
@@ -40,7 +42,7 @@ const Register = () => {
               />
               <Form.Control
                 type='password'
-                placeholder='Password'
+                placeholder='Senha'
                 onChange={(e) =>
                   updateRegisterInfo({
                     ...registerInfo,

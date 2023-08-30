@@ -11,6 +11,8 @@ const Login = () => {
         <Row
           style={{
             height: "100vh",
+            width: "60vh",
+            marginLeft: "30%",
             justifyContent: "center",
             paddingTop: "10%",
           }}
@@ -28,7 +30,7 @@ const Login = () => {
               />
               <Form.Control
                 type='password'
-                placeholder='Password'
+                placeholder='Senha'
                 onChange={(e) =>
                   updateLoginInfo({ ...loginInfo, password: e.target.value })
                 }

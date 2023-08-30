@@ -3,7 +3,7 @@
 body {
   color: white;
   font-family: "Nunito", sans-serif;
-  background: rgb(40, 40, 40);
+  background: #14110f;
 }
 
 /* All users */
@@ -13,8 +13,9 @@ body {
 }
 
 .single-user {
-  background: rgb(0, 213, 255);
-
+  background: #c9184a;
+  font-weight: bold;
+  color: #fff;
   cursor: pointer;
   padding: 5px 7px;
   border-radius: 10px;
@@ -49,7 +50,7 @@ body {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background: rgb(0, 219, 0);
+  background: #89fc00;
   position: absolute;
   top: -3px;
   right: -3px;
@@ -60,7 +61,7 @@ body {
 .chat-box {
   max-height: calc(100vh - 10rem);
   overflow-y: auto;
-  background: rgb(25, 25, 25);
+  background: #e8eddf;
   border-radius: 10px;
 }
 
@@ -75,7 +76,7 @@ body {
   justify-content: center;
   padding: 0.75rem;
   color: white;
-  background: rgb(30, 30, 30);
+  background: #333533;
 }
 
 /* Messages */
@@ -86,8 +87,8 @@ body {
 }
 
 .message {
-  color: white;
-  background: #282828;
+  color: #fff;
+  background: #272932;
   padding: 0.75rem;
   border-radius: 5px;
   max-width: 50%;
@@ -95,7 +96,7 @@ body {
 
 .message.self {
   color: white;
-  background: #00bd9b;
+  background: #7f7f7f;
 }
 
 .message-footer {
@@ -107,12 +108,12 @@ body {
 /* Chat Input  */
 .chat-input {
   width: 100%;
-  background: rgb(30, 30, 30);
+  background: #333533;
   padding: 1rem;
 }
 .send-btn {
   border: none;
-  background: rgba(72, 112, 223, 1);
+  background: #ff0054;
   color: white;
   height: 40px;
   width: 40px;
@@ -122,6 +123,9 @@ body {
 /* Notification */
 .notifications {
   position: relative;
+}
+.navbar {
+  background-color: #000000;
 }
 
 .notifications-icon {
@@ -137,9 +141,8 @@ body {
   position: absolute;
   top: 2rem;
   right: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  background: #181d31;
+  box-shadow: #e5e5e5;
+  background: #000000;
   color: white;
   z-index: 5;
 }
@@ -148,6 +151,7 @@ body {
   padding: 1rem;
   padding-bottom: 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -157,6 +161,7 @@ body {
 }
 
 .mark-as-read {
+  color: #f9c80e;
   cursor: pointer;
   font-weight: 700;
   opacity: 0.8;
@@ -174,7 +179,7 @@ body {
 }
 
 .notification.not-read {
-  background: #263159;
+  background: #ff0054;
 }
 
 .notification-time {
@@ -185,7 +190,7 @@ body {
 
 .notification-count {
   display: flex;
-  background: #00bd9b;
+  background: #ff0054;
   height: 25px;
   width: 25px;
   font-size: 14px;
@@ -200,7 +205,7 @@ body {
 
 .this-user-notifications {
   display: flex;
-  background: #00bd9b;
+  background: #ff0054;
   height: 20px;
   width: 20px;
   font-size: 12px;

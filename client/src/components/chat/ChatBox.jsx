@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
 import { useFetchRecipientUser } from "../../hooks/useFetchRecipient";
@@ -12,7 +12,19 @@ const ChatBox = () => {
     useContext(ChatContext);
   const { recipientUser } = useFetchRecipientUser(currentChat, user);
   const [textMessage, setTextMessage] = useState("");
-  console.log("atual", currentChat);
+  const scroll = useRef();
+
+  useEffect(() => {
+    scroll.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
+  if (!user) {
+    return (
+      <p style={{ textAlign: "center", width: "100%" }}>
+        Carregando usuario...
+      </p>
+    );
+  }
   if (!recipientUser)
     return (
       <div>
@@ -44,6 +56,7 @@ const ChatBox = () => {
                   ? "message self align-self-end flex-grow-0"
                   : "message align-self-start flex-grow-0"
               }`}
+              ref={scroll}
             >
               <span>{message.text}</span>
               <span className='message-footer'>
@@ -57,7 +70,8 @@ const ChatBox = () => {
           value={textMessage}
           onChange={setTextMessage}
           fontFamily='nunito'
-          borderColor='rgba(72,112,223,0.2'
+          borderColor='rgba(72,112,223,0.2)'
+          placeholder='Digite a mensagem'
         />
         <button
           className='send-btn'
