@@ -37,9 +37,7 @@ Chat Realtime
 
 ![login](https://github.com/ca-madureira/chat-mern/assets/121184472/cc4dd192-5674-4afc-81d5-1a353f8fff43)
 
-
-
-
+![notification](https://github.com/ca-madureira/chat-mern/assets/121184472/05cf6557-ee6c-4fc7-b2e3-e043b4e93b78)
 
 
 
